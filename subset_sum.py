@@ -48,16 +48,16 @@ def find_indices(nums, target=0):
 
 
 def main():
-    n = input()
-    n = n.split()
-    n1 = int(n[0])
-    target = int(n[1])
-    lst1 = []
-    lst2 = []
-    for _ in range(n1):
-        s = input().split()
-        lst1.append(s[0])
-        lst2.append(int(s[1]))
+    with open('input.txt', 'r') as file:
+        n = file.readline().split()
+        n1 = int(n[0])
+        target = int(n[1])
+        lst1 = []
+        lst2 = []
+        for _ in range(n1):
+            s = file.readline().split()
+            lst1.append(s[0])
+            lst2.append(int(s[1]))
         
     indices = find_indices(lst2, target)
     if indices:
