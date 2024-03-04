@@ -6,7 +6,7 @@ POPULATION_SIZE = 10
 GEN_SIZE = 1000
 
 
-def find_indices(nums, target=0):
+def find_indices(nums, target):
     population = [[random.randint(0, 1) for _ in range(len(nums))] for _ in range(POPULATION_SIZE)]
 
     def fitness_function(solution):
